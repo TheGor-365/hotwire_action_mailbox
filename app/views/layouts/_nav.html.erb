@@ -23,5 +23,15 @@
         </li>
       </ul>
     </div>
+    <% if user_signed_in? %>
+      <small class="border rounded border-success p-1 me-3 text-success">
+        <%= current_user.email %>
+      </small>
+      <%= link_to 'Settings', edit_user_registration_path, class: "text-dark text-decoration-none me-2" %>
+      <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: "btn btn-outline-danger" %>
+    <% else %>
+      <%= link_to 'Sign in', new_user_session_path, class: "btn btn-success me-2" %>
+      <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-secondary" %>
+    <% end %>
   </div>
 </nav>

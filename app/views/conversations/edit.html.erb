@@ -1,0 +1,9 @@
+<h1 class="mb-5">Editing conversation</h1>
+
+<%= render "form", conversation: @conversation %>
+
+<br>
+<div class="btn-group my-5">
+  <%= link_to "Show this conversation", @conversation, class: "btn btn-sm btn-outline-dark" %>
+  <%= link_to "Back to conversations", conversations_path, class: "btn btn-sm btn-outline-dark" %>
+</div>
