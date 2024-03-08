@@ -1,0 +1,10 @@
+<div class="border border-primary p-5">
+  <%= form_with model: [ conversation, post ] do |form| %>
+    <div>
+      <%= form.label :message, class: 'form-label' %>
+      <%= form.rich_text_area :body, class: 'form-label' %>
+    </div>
+
+    <%= form.submit class: 'btn btn-outline-success btn-sm my-5' %>
+  <% end %>
+</div>
