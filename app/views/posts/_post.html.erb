@@ -1,0 +1,11 @@
+<%= tag.div id: dom_id(post) do %>
+  <div class="border border-primary p-5 my-5">
+    <p>
+      <%= post.author.name %>
+    </p>
+    <small class="text-muted">
+      (<%= post.author.email %>)
+    </small>
+    <%= post.body %>
+  </div>
+<% end %>

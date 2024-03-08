@@ -6,6 +6,7 @@ class ConversationsController < ApplicationController
   end
 
   def show
+    @posts = @conversation.posts
   end
 
   def new

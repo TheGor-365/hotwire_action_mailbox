@@ -1,14 +1,10 @@
-<p style="color: green"><%= notice %></p>
+<p class="display-3 text-center my-5 text-success">
+  Conversations
+</p>
 
-<h1 class="mb-5">Conversations</h1>
-
+<%= turbo_stream_from 'conversations' %>
 <div id="conversations">
-  <% @conversations.each do |conversation| %>
-    <%= render conversation %>
-    <p>
-      <%= link_to "Show this conversation", conversation, class: "btn btn-sm btn-outline-dark mt-3" %>
-    </p>
-  <% end %>
+  <%= render @conversations %>
 </div>
 
 <%= link_to "New conversation", new_conversation_path, class: "btn btn-sm btn-outline-dark mt-3" %>

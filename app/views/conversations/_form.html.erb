@@ -5,7 +5,7 @@
 
     <div class="form-inputs">
       <%= f.input :subject %>
-      <%= f.association :contact %>
+      <%= f.association :contact, collection: Contact.all, label_method: :name, value_method: :id, prompt: 'Choose contact' %>
     </div>
 
     <div class="form-actions">

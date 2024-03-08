@@ -7,3 +7,10 @@
   <%= link_to "Back to conversations", conversations_path, class: "btn btn-sm btn-outline-dark" %>
   <%= button_to "Destroy this conversation", @conversation, method: :delete, class: "btn btn-sm btn-outline-dark" %>
 </div>
+
+<hr class="my-5">
+
+<%= turbo_stream_from @conversation %>
+<div id="posts">
+  <%= render @posts %>
+</div>
